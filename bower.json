@@ -1,0 +1,26 @@
+{
+  "name": "fuck-calculator",
+  "version": "0.0.1",
+  "authors": [
+    "Abi Hafshin Alfarouq <abi@hafs.in>"
+  ],
+  "description": "Automatically calculate how many fuck i give",
+  "main": "index.html",
+  "keywords": [
+    "fuck"
+  ],
+  "license": "WTFPL",
+  "homepage": "http://fuck.hafs.in/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.4"
+  }
+}

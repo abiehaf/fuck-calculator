@@ -1,0 +1,22 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width')
+        title Fuck Calculator
+        if DEBUG
+            link(rel="styleSheet", href="bower_components/bootstrap/dist/css/bootstrap.css")
+        else
+            link(rel="styleSheet", href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css")
+        link(rel="styleSheet", href="css/style.css")
+    body
+        .container
+            h1 Hello Abi!
+
+        if DEBUG
+            script(src="bower_components/jquery/dist/jquery.js")
+            script(src="bower_components/bootstrap/dist/js/bootstrap.js")
+        else
+            script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+            script(src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js")
+        script(src="js/main.js")
