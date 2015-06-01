@@ -1,0 +1,41 @@
+header#page-header
+    h1.title FuckCalculator
+    .subtitle This application automatically calculate the number of fucks I give
+
+#page-content.content
+    section#loading-section
+        svg#circle(xmlns="http://www.w3.org/2000/svg", height="300", width="300", version="1.1", viewBox="0 0 500 500")
+            g(stroke-linejoin="round", stroke-width="10", fill="none")
+                circle(stroke="#b5b5b5", cx="250", r="240", cy="250")
+                path#circle-progress
+        #action-container.box
+            .inner
+                p press calculate to start counting
+                button#start-button.btn.btn-lg.btn-primary
+                    span.glyphicon.glyphicon-play
+                    | &nbsp; Calculate
+        #progress-container.box(style="display:none")
+            .inner
+                p calculating
+                #progress-percent 0%
+
+    section#result-section(style="display:none")
+        .big-result
+            .prop Fuck I give today
+            .value 0
+        .row.result-detail
+            .col-md-4
+                .prop Fuck I gave this week
+                .value 0
+            .col-md-4
+                .prop Fuck I gave this month
+                .value 0
+            .col-md-4
+                .prop Total fuck I gave
+                .value 0
+
+
+
+
+
+

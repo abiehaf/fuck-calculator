@@ -8,7 +8,7 @@ concat = require 'gulp-concat'
 uglify = require 'gulp-uglify'
 serve = require 'gulp-serve'
 
-DEBUG = true
+DEBUG = process.env.NODE_ENV isnt 'release'
 
 SRC_DIR = 'src'
 DEST_DIR = 'build'
@@ -34,7 +34,7 @@ gulp.task 'script', ->
 gulp.task 'build', ['index', 'style', 'script']
 
 gulp.task 'watch', ['build'], ->
-  gulp.watch "#{SRC_DIR}/index.jade", ['index']
+  gulp.watch ["#{SRC_DIR}/*.jade"], ['index']
   gulp.watch "#{SRC_DIR}/styles/**/*.less", ['style']
   gulp.watch "#{SRC_DIR}/scripts/**/*.coffee", ['script']
 
