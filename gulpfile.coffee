@@ -31,7 +31,11 @@ gulp.task 'script', ->
   .pipe gif !DEBUG, uglify()
   .pipe gulp.dest "#{DEST_DIR}/js"
 
-gulp.task 'build', ['index', 'style', 'script']
+gulp.task 'image', ->
+  gulp.src "#{SRC_DIR}/image/*"
+  .pipe gulp.dest "#{DEST_DIR}/img/"
+
+gulp.task 'build', ['index', 'style', 'script', 'image']
 
 gulp.task 'watch', ['build'], ->
   gulp.watch ["#{SRC_DIR}/*.jade"], ['index']

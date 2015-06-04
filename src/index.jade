@@ -1,9 +1,14 @@
+- title = "Fuck Calculator"
+- description = "Almost everyone don't know how many fucks I give. This application will help you to calculate it."
+
+
 doctype html
 html(lang='en')
-    head
+    head(prefix="og: http://ogp.me/ns#")
         meta(charset='UTF-8')
         meta(name='viewport', content='width=device-width')
-        title Fuck Calculator
+        title= title
+        meta(name="description", content=description)
         if DEBUG
             link(rel="styleSheet", href="bower_components/bootstrap/dist/css/bootstrap.css")
             //-link(rel="styleSheet", href="bower_components/bootstrap/dist/css/bootstrap-theme.css")
@@ -12,6 +17,14 @@ html(lang='en')
             //-link(rel="styleSheet", href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap-theme.min.css")
         link(rel="styleSheet", href="http://fonts.googleapis.com/css?family=Lato:300|Roboto+Condensed:400")
         link(rel="styleSheet", href="css/style.css")
+        link(rel="icon", type="image/png", href="img/fuck.png")
+
+        meta(property="og:title", content=title)
+        meta(property="og:type", content="website")
+        meta(property="og:description", content=description)
+        meta(property="og:url", content="http://fuck.hafs.in")
+        meta(property="og:image", content="http://fuck.hafs.in/img/fuck.png")
+        meta(property="og:locale", content="en_US")
     body
         .container
             include _content
